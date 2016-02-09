@@ -14,7 +14,10 @@
   "author": "jon z",
   "license": "ISC",
   "devDependencies": {
+    "babel-plugin-syntax-jsx": "~6.5.0",
+    "babel-plugin-transform-react-jsx": "~6.5.0",
     "babel-preset-es2015": "~6.5.0",
+    "babel-preset-react": "~6.5.0",
     "grunt": "~0.4.5",
     "grunt-babel": "~6.0.0",
     "grunt-contrib-watch": "~0.6.1",

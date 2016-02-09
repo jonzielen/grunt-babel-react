@@ -5,18 +5,32 @@ module.exports = function(grunt) {
   grunt.initConfig({
   	babel: {
   		options: {
-  			sourceMap: true,
-  			presets: ['babel-preset-es2015']
+  			sourceMap: false,
+  			presets: ['babel-preset-es2015'],
+        plugins: ['transform-react-jsx', 'syntax-jsx']
   		},
   		dist: {
   			files: {
-  				'js/main.js': 'js/main.src.js'
+  				'js/main.js': [
+          'js/jsx/main.src.jsx'
+        ]
   			}
   		}
   	},
+    jsx: {
+      files: [{
+        expand: true,
+        cwd: 'js/jsx',
+        src: ['*.jsx'],
+        dest: 'js',
+        ext: '.js'
+      }]
+    },
     watch: {
       scripts: {
-        files: ['**/*.src.js'],
+        files: [
+          '**/*.src.jsx'
+        ],
         tasks: ['babel'],
       },
     }
