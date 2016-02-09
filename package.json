@@ -1,0 +1,23 @@
+{
+  "name": "react",
+  "version": "0.0.1",
+  "description": "test react",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react",
+    "grunt",
+    "bable"
+  ],
+  "author": "jon z",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-preset-es2015": "~6.5.0",
+    "grunt": "~0.4.5",
+    "grunt-babel": "~6.0.0",
+    "grunt-contrib-watch": "~0.6.1",
+    "load-grunt-tasks": "~3.4.0"
+  }
+}
