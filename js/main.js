@@ -5,18 +5,23 @@
 (function () {
   "use strict";
 
-  var HelloWorld = React.createClass({
+  var message = 'Hi Jon!';
 
+  var HelloWorld = React.createClass({
     render: function render() {
       return React.createElement(
-        "h1",
+        "header",
         null,
-        "Hello World!!!"
+        React.createElement(
+          "h1",
+          null,
+          this.props.label
+        )
       );
     }
   });
 
   var mainElement = document.querySelector("main");
 
-  ReactDOM.render(React.createElement(HelloWorld, null), mainElement);
+  ReactDOM.render(React.createElement(HelloWorld, { label: message }), mainElement);
 })();

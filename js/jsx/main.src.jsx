@@ -3,16 +3,19 @@
 (function() {
   "use strict";
 
-  var HelloWorld = React.createClass({
+  let message = 'Hi Jon!';
 
+  var HelloWorld = React.createClass({
     render: function() {
       return (
-        <h1>Hello World!!!</h1>
+        <header>
+          <h1>{this.props.label}</h1>
+        </header>
       );
     }
   });
 
   var mainElement = document.querySelector("main");
 
-  ReactDOM.render(<HelloWorld></HelloWorld>, mainElement);
+  ReactDOM.render(<HelloWorld label={message}></HelloWorld>, mainElement);
 })();
